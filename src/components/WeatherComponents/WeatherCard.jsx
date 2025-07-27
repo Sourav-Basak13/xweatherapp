@@ -1,8 +1,8 @@
-import styles from "./Weather.module.css";
+import "./Weather.css";
 
 const WeatherCard = ({ title, data }) => {
   return (
-    <div className={styles["weather-card"]}>
+    <div className="weather-card">
       <h3>{title}</h3>
       <p>{data}</p>
     </div>

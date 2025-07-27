@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./SearchBar.module.css";
+import "./SearchBar.css";
 
 const SearchBar = ({ onSearch }) => {
   const [city, setCity] = useState("");
@@ -9,7 +9,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div className={styles["search-bar"]}>
+    <div className="search-bar">
       <input
         type="text"
         value={city}

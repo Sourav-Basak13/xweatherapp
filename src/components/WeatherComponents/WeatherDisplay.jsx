@@ -1,7 +1,7 @@
 import axios from "axios";
 import WeatherCard from "./WeatherCard";
 import { useEffect, useState } from "react";
-import styles from "./Weather.module.css";
+import "./Weather.css";
 
 const WeatherDisplay = ({ city }) => {
   const [weatherData, setWeatherData] = useState(null);
@@ -31,10 +31,10 @@ const WeatherDisplay = ({ city }) => {
   }, [city]);
 
   return (
-    <div className={styles["weather-display"]}>
+    <div className="weather-display">
       {loading && <p>Loading data...</p>}
       {!loading && weatherData && (
-        <div className={styles["weather-cards"]}>
+        <div className="weather-cards">
           <WeatherCard
             title="Temperature"
             data={`${weatherData.current.temp_c}°C`}
